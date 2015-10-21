@@ -61,19 +61,25 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QDk-xL-pvb" id="eKg-fP-Uqe"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k79-SD-VFZ">
                                 <rect key="frame" x="84" y="194" width="97" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QDk-xL-pvb" id="bbm-5a-fpG"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-qD-gKn">
                                 <rect key="frame" x="105" y="239" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Validate"/>
                                 <connections>
-                                    <action selector="validateButton:" destination="QDk-xL-pvb" eventType="touchUpInside" id="vxB-Gp-YbS"/>
+                                    <action selector="validate:" destination="QDk-xL-pvb" eventType="touchUpInside" id="Tt2-BW-B9n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,18 +89,19 @@
                     <navigationItem key="navigationItem" id="JRs-pV-gjZ">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="hxQ-Mn-XN8">
                             <connections>
-                                <action selector="closeBarButton:" destination="QDk-xL-pvb" id="kQD-Ox-hxW"/>
+                                <action selector="close:" destination="QDk-xL-pvb" id="w90-3N-k2f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="passwordTextField" destination="k79-SD-VFZ" id="VyS-75-msU"/>
                         <outlet property="usernameTextField" destination="LyQ-7o-H77" id="bmO-9E-LlA"/>
+                        <outlet property="validateButton" destination="q9w-qD-gKn" id="e1E-2S-A3O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMZ-pG-Ubh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2797" y="403"/>
+            <point key="canvasLocation" x="2789" y="403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p3A-1j-J0l">
