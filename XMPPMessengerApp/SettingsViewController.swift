@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+class SettingsViewController {
+    
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBAction func validateButton(sender: UIButton) {
+    }
+    @IBAction func closeBarButton(sender: UIBarButtonItem) {
+    }
+    
+}

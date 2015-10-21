@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOi-M9-v2U">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -34,7 +35,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="Er9-kG-9WH"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="7us-Jo-nM9">
                             <connections>
-                                <segue destination="QDk-xL-pvb" kind="show" id="eC7-tv-bsJ"/>
+                                <segue destination="c9A-k1-NtT" kind="presentation" identifier="One.HomeToSettings" id="4TU-gT-aAz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -43,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1126" y="403"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="PsP-bY-39C">
             <objects>
-                <viewController id="QDk-xL-pvb" sceneMemberID="viewController">
+                <viewController id="QDk-xL-pvb" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gpP-p4-H3b"/>
                         <viewControllerLayoutGuide type="bottom" id="wGG-b5-Qfw"/>
@@ -54,13 +55,46 @@
                     <view key="view" contentMode="scaleToFill" id="YNp-R7-IVi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LyQ-7o-H77">
+                                <rect key="frame" x="84" y="143" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k79-SD-VFZ">
+                                <rect key="frame" x="84" y="194" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-qD-gKn">
+                                <rect key="frame" x="105" y="239" width="55" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Validate"/>
+                                <connections>
+                                    <action selector="validateButton:" destination="QDk-xL-pvb" eventType="touchUpInside" id="vxB-Gp-YbS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JRs-pV-gjZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="hxQ-Mn-XN8">
+                            <connections>
+                                <action selector="closeBarButton:" destination="QDk-xL-pvb" id="kQD-Ox-hxW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="k79-SD-VFZ" id="VyS-75-msU"/>
+                        <outlet property="usernameTextField" destination="LyQ-7o-H77" id="bmO-9E-LlA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMZ-pG-Ubh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1859" y="403"/>
+            <point key="canvasLocation" x="2797" y="403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p3A-1j-J0l">
@@ -80,6 +114,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkM-SN-Bxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="314" y="403"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WFH-nr-NtQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9A-k1-NtT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvi-jp-Vz5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QDk-xL-pvb" kind="relationship" relationship="rootViewController" id="vJz-ep-h2V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRM-cS-sz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="403"/>
         </scene>
     </scenes>
 </document>

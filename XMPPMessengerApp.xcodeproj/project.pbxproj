@@ -131,6 +131,7 @@
 				TargetAttributes = {
 					45D864761BD7890500332933 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = R8SXHLJ4HE;
 					};
 				};
 			};
@@ -336,6 +337,7 @@
 			baseConfigurationReference = 9BE8340E6678211339B13160 /* Pods-XMPPMessengerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = XMPPMessengerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -349,6 +351,7 @@
 			baseConfigurationReference = 6AAEB94CE571C5ECA832AE0B /* Pods-XMPPMessengerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = XMPPMessengerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
